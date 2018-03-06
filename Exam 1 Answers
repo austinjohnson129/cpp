@@ -1,0 +1,32 @@
+1)	B
+2)	B
+3)	A
+4)	C
+5)	A
+6)	A
+7)	C
+8)	D
+9)	B
+10)	 B
+
+Coding Question 2
+
+#include <iostream>
+using namespace std;
+int main(int argc, const char *argv[]) {
+    // r = rows, d = diamonds, s = spaces
+    for (int r = 1, d = 1, s = 4; r <= 9;r++) {
+        for (int x = 0; x < s; x++) {
+            cout << " ";
+        }
+        for (int y = 0; y < d; y++) {
+            cout << "*";
+        }
+
+        (r >= 5) ? d -= 2 : d += 2;
+        (r >= 5) ? s++ : s--;
+
+        cout << endl;
+    }
+    return 0;
+}
